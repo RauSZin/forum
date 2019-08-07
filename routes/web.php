@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/register', function () {
-    return view('register');
+
+Route::get('/', function () {
+    return view('auth/register');
 });
 
-Route::post('/register', 'RegisterController@validator')->name('join')->middleware('auth');
+Route::get('login', function(){
+    return view('auth/login');
+});
 
+Route::post('/register', 'auth\RegisterController@validator')->name('register')->middleware('auth');

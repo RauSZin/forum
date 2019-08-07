@@ -62,8 +62,8 @@
 
                 <div>
 
-                    <form action="{{ route('join') }}" method="POST" enctype="form-cadastro">
-                        <csrf-token>
+                    <form action="{{ route('register') }}" method="POST" enctype="form-cadastro">
+                        {{  csrf_field() }}
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Name">
                         </div>
@@ -80,7 +80,7 @@
                             <input type="password" name="confirm" placeholder="Confirm">
                         </div>
                         <div class="button">
-                            <button type="submite">Join !</button>
+                            <button type="submit">Join !</button>
                         </div>
                     </form>
 
