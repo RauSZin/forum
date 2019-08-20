@@ -21,3 +21,11 @@ Route::get('login', function(){
 });
 
 Route::post('/register', 'auth\RegisterController@validator')->name('register')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
