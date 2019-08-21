@@ -294,6 +294,7 @@ class ComposerStaticInitbcd79b92f608ec26bf37d7e1de7333dc
     );
 
     public static $classMap = array (
+        'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -301,6 +302,7 @@ class ComposerStaticInitbcd79b92f608ec26bf37d7e1de7333dc
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -628,7 +630,6 @@ class ComposerStaticInitbcd79b92f608ec26bf37d7e1de7333dc
         'Faker\\Provider\\it_IT\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/it_IT/Payment.php',
         'Faker\\Provider\\it_IT\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/it_IT/Person.php',
         'Faker\\Provider\\it_IT\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/it_IT/PhoneNumber.php',
-        'Faker\\Provider\\it_IT\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/it_IT/Text.php',
         'Faker\\Provider\\ja_JP\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ja_JP/Address.php',
         'Faker\\Provider\\ja_JP\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ja_JP/Company.php',
         'Faker\\Provider\\ja_JP\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ja_JP/Internet.php',

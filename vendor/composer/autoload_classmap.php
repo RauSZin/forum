@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdminSeeder' => $baseDir . '/database/seeds/AdminSeeder.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -13,6 +14,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -340,7 +342,6 @@ return array(
     'Faker\\Provider\\it_IT\\Payment' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/it_IT/Payment.php',
     'Faker\\Provider\\it_IT\\Person' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/it_IT/Person.php',
     'Faker\\Provider\\it_IT\\PhoneNumber' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/it_IT/PhoneNumber.php',
-    'Faker\\Provider\\it_IT\\Text' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/it_IT/Text.php',
     'Faker\\Provider\\ja_JP\\Address' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ja_JP/Address.php',
     'Faker\\Provider\\ja_JP\\Company' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ja_JP/Company.php',
     'Faker\\Provider\\ja_JP\\Internet' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ja_JP/Internet.php',

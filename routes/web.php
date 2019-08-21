@@ -11,21 +11,20 @@
 |
 */
 
-
+#-=-=-=-página index-=-=-=-=-#
 Route::get('/', function () {
     return view('auth/register');
 });
 
-Route::get('login', function(){
+#-=-=-=-login/registro-=-=-=-=-#
+
+Route::get('home', function(){
     return view('auth/login');
 });
 
 Route::post('/register', 'auth\RegisterController@validator')->name('register')->middleware('auth');
 
+
+
+#Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
