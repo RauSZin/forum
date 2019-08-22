@@ -16,7 +16,7 @@ class AdminSeeder extends Seeder
         	'name' => 'Raul',
         	'email' => 'raul.ifsp@gmail.com',
         	'password' => '123123123',
-        	'nickname' => 'programetor',
+        	'nickname' => 'programetor'
         ];
         DB::table('users')->insert($users);
     }

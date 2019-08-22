@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -49,13 +50,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
 
-            'type' => 'required|string|min:4|max:5',
             'name' => 'required|string|min:2|max:50',
             'email' => 'required|string|email|max:50|unique:users',
             'password' => 'required|string|min:6||max:16|confirmed',
-            'nickname' => 'required|string|min:2|max:10|unique:users',
-           
-
+            'nickname' => 'required|string|min:2|max:10|unique:users'
 
         ]);
         
@@ -67,16 +65,21 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(Request $request)
     {
-        return User::create([
-
-            'type' => 'user',
-            'name' => $data['name'],
-            'nickname' => $data['nickname'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            
-        ]);
+        $user                     =  new User();
+        $user->type              =  'user';
+        $user->name        =  $request->input('name');
+        $user->nickname        =  $request->input('nickname');
+        $user->email        =  $request->input('email');
+        $user->password        =  $request->input('password');
+        // $user->save();
+        // User::create([
+        //     'type' => 'user',
+        //     'name' => $data['name'],
+        //     'nickname' => $data['nickname'],
+        //     'email' => $data['email'],
+        //     'password' => bcrypt($data['password'])
+        // ]);
     }
 }

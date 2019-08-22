@@ -22,9 +22,9 @@ Route::get('home', function(){
     return view('auth/login');
 });
 
-Route::post('/register', 'auth\RegisterController@validator')->name('register')->middleware('auth');
+Route::post('/register', 'auth\RegisterController@create')->name('register');
 
 
 
 #Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+// Auth::routes();
