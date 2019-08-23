@@ -18,9 +18,7 @@ Route::get('/', function () {
 
 #-=-=-=-login/registro-=-=-=-=-#
 
-Route::get('home', function(){
-    return view('auth/login');
-});
+Route::get('/home')->name('home');
 
 Route::post('/register', 'auth\RegisterController@create')->name('register');
 

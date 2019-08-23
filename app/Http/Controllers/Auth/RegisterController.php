@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class RegisterController extends Controller
 {
@@ -68,18 +69,20 @@ class RegisterController extends Controller
     protected function create(Request $request)
     {
         $user                     =  new User();
-        $user->type              =  'user';
-        $user->name        =  $request->input('name');
-        $user->nickname        =  $request->input('nickname');
-        $user->email        =  $request->input('email');
-        $user->password        =  $request->input('password');
-        // $user->save();
-        // User::create([
-        //     'type' => 'user',
+        $user->name               =  $request->input('name');
+        $user->nickname           =  $request->input('nickname');
+        $user->email              =  $request->input('email');
+        $user->type               =  $request->input('type');
+        $user->password           =  $request->input('password');
+        $user->save();
+        
+        //User::create([
+        //     'type' => $data['type'],
         //     'name' => $data['name'],
         //     'nickname' => $data['nickname'],
         //     'email' => $data['email'],
-        //     'password' => bcrypt($data['password'])
-        // ]);
+        //     'password' => bcrypt($data['password']),
+        //      $user->save()
+         //]);
     }
 }

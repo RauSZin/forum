@@ -64,6 +64,7 @@
 
                     <form action="{{ route('register') }}" method="POST" enctype="form-cadastro">
                         {{  csrf_field() }}
+                        <input type="hidden" name="type" datatype="" value="user" readonly="readonly">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Name">
                         </div>
