@@ -40,7 +40,8 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     public function confirm(Request $request){
-        dd($request);
+        echo $request['email'];
+        echo $request['password'];
         die();
     }
 }
