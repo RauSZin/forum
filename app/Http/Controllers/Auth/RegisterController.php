@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'nickname' => 'required|string|min:2|max:10|unique:users'
 
         ]);
-        
+           // return redirect()->route('Register');
     }
 
     /**
@@ -75,7 +75,8 @@ class RegisterController extends Controller
         $user->type               =  $request->input('type');
         $user->password           =  $request->input('password');
         $user->save();
-        
+    
+        return redirect()->route('home');
         //User::create([
         //     'type' => $data['type'],
         //     'name' => $data['name'],

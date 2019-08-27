@@ -13,16 +13,21 @@
 
 #-=-=-=-página index-=-=-=-=-#
 Route::get('/', function () {
-    return view('auth/register');
+    return view('welcome');
 });
 
-#-=-=-=-login/registro-=-=-=-=-#
+Route::get('/home', function(){
+	return view('home');
+});
 
-Route::get('/home')->name('home');
+#-=-=-=-registro-=-=-=-=-#
 
+Auth::routes();
 Route::post('/register', 'auth\RegisterController@create')->name('register');
+Route::post('/register/validator, auth\RegisterController@validator')->name('validator');
 
+#-=-=-=-Login-=-=-=-=-#
 
-
-#Route::get('/home', 'HomeController@index')->name('home');
-// Auth::routes();
+Route::post('/login', 'auth\LoginController@confirm')->name('confirm');
+Route::get('/home', 'HomeController@index')->name('home');
+//Route::post('login', [ 'as' => 'login', 'uses' => 'LoginController@do']);
