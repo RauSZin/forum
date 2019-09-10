@@ -8,77 +8,52 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-            .button{
-            	padding-top: 30px;
-            }
+        body{
+            font-family: 'Rajdhani', sans-serif;
+        }
+        .btn-outline-dark{
+            border:none;
+        }
         </style>
     </head>
     <body>
-            <div class="content">
-                <div class="title m-b-md">
-                  	Login
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#">
+    <img src="https://static.thenounproject.com/png/640563-200.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    HelpIF
+  </a>
+  <ul class="navbar-nav">
+  <li class="nav-item"><a class="btn btn-outline-dark mr-3" href="{{ url('/') }}">Home</a></li>
+  <li class="nav-item"><a class="btn btn-outline-dark" href="{{ route('register') }}">Registrar</a></li>
+  
+</ul>
 
+</nav>
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-4 col-md-4 text-center p-5">
+                   
+                    <h2>Login</h2>
+             
                 <div>
-
                     <form action="{{ route('login') }}" method="POST" enctype="form-login">
                         {{  csrf_field() }}
                         <div class="form-group">
-                            <input type="text" name="email" placeholder="E-mail">
+                            <input class="form-control" type="text" name="email" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" placeholder="Password">
+                            <input class="form-control" type="password" name="password" placeholder="Password">
                         </div>
-                        <div class="button">
-                            <button type="submit">Login !</button>
-                        </div>
+                
+                            <a class="btn btn-outline-success" type="submit">Login</button>
+                       
                     </form>
 
                 </div>
         </div>
+        @yield('content')
     </body>
 </html>

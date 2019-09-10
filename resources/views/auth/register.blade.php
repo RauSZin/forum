@@ -8,81 +8,63 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        html{
+            height:100%;
+            width:100%;
+        }
+        body{
+            font-family: 'Rajdhani', sans-serif;
+            background-image:linear-gradient(#fff, #fff);
+            background-size:100%;
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
+        }
+        .btn-outline-dark{
+            border:none;
+        }
         </style>
     </head>
     <body>
-            <div class="content">
-                <div class="title m-b-md">
-                    Join
-                </div>
-
+    <nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#">
+    <img src="https://static.thenounproject.com/png/640563-200.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    HelpIF
+  </a>
+  <ul class="navbar-nav">
+  <li class="nav-item"><a class="btn btn-outline-dark mr-3" href="{{ url('/') }}">Home</a></li>
+  <li class="nav-item"><a class="btn btn-outline-dark " href="{{ route('login') }}">Login</a></li>
+    </ul>
+</nav>
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-4 col-md-4 text-center p-5">
+                   
+                    <h2>Registrar</h2>
+             
                 <div>
 
                     <form action="{{ route('register') }}" method="POST" enctype="form-cadastro">
                         {{  csrf_field() }}
                         <input type="hidden" name="type" datatype="" value="user" readonly="readonly">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Name">
+                            <input class="form-control" type="text" name="name" placeholder="Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="nickname" placeholder="Nickname">
+                            <input class="form-control" type="text" name="nickname" placeholder="Nickname">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="email" placeholder="E-mail">
+                            <input class="form-control" type="text" name="email" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" placeholder="Password">
+                            <input class="form-control" type="password" name="password" placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="confirm" placeholder="Confirm">
+                            <input class="form-control" type="password" name="confirm" placeholder="Confirm">
                         </div>
-                        <div class="button">
-                            <button type="submit">Join !</button>
-                        </div>
+            
+                        <button type="button" class="btn btn-outline-success">Join</button>
                     </form>
 
                 </div>
