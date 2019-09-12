@@ -33,8 +33,8 @@
     HelpIF
   </a>
   <ul class="navbar-nav">
-  <li class="nav-item"><a class="btn btn-outline-dark mr-3" href="{{ url('/') }}">Home</a></li>
-  <li class="nav-item"><a class="btn btn-outline-dark " href="{{ route('login') }}">Login</a></li>
+  <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+  <li class="nav-item"><a class="nav-link " href="{{ route('login') }}">Login</a></li>
     </ul>
 </nav>
         <div class="container">
@@ -64,7 +64,7 @@
                             <input class="form-control" type="password" name="confirm" placeholder="Confirm">
                         </div>
             
-                        <button type="button" class="btn btn-outline-success">Join</button>
+                        <button type="submit" class="btn btn-outline-success">Join</button>
                     </form>
 
                 </div>

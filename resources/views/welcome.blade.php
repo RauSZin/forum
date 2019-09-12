@@ -10,7 +10,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Styles -->
     <style>
 
@@ -29,7 +31,7 @@
 
         }
         .card{
-            box-shadow:0 0px 5px 3px #f5f5f5;
+            box-shadow:5px 5px 10px 4px #e3e3e3;
             border:none;
         }
 
@@ -120,23 +122,160 @@
     <div class="row align-items-center text-justify">
 
         <div class="col-md-3 offset-md-1 card mr-5">
-            <h3 class="pt-3">Transtornos</h2>
+            <h3 class="pt-3">Transtornos</h3>
             <hr>
-            <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a href="">Ver Mais</a></p>
+            <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
         </div>
         <div class="col-md-3  card mr-5">
             <h3 class="pt-3">Esquizofrenia</h2>
-            <hr>
-            <p class="p-2">Percepção delirante. Uma percepção absolutamente normal recebe uma significação delirante, que ocorre de modo simultâneo ao ato perceptivo, em ger... <a href="">Ver Mais</a></p>
+                <hr>
+                <p class="p-2">Percepção delirante. Uma percepção absolutamente normal recebe uma significação delirante, que ocorre de modo simultâneo ao ato perceptivo, em ger... <a data-toggle="modal" data-target="#EsquizofreniaModal">Ver Mais</a></p>
+            </div>
+            <div class="col-md-3 card">
+                <h3 class="pt-3">TOC</h2>
+                    <hr>
+                    <p class="p-2">As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na con... <a data-toggle="modal" data-target="#TOCModal">Ver Mais</a></p>
+                </div>
+
+
+            </div>
         </div>
-        <div class="col-md-3 card">
-        <h3 class="pt-3">TOC</h2>
-            <hr>
-            <p class="p-2">As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na con... <a href="">Ver Mais</a></p>
-        </div>
-        <
     </div>
 </div>
+<div class="modal fade bd-example-modal-lg" id="transtornoModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><strong>Transtornos</strong></h5>
+        <div class="modal-body mt-5">
+            <p>- Surgem na infância ou na adolescência (não anula o fato de adultos ou idosos desenvolverem);</p>
+            <p>- Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do indivíduo. Isso não significa que qualquer episódio possa ser um transtorno de personalidade, a pessoa pode ter outros tipos de doença mental.</p>
+            <p>- O modo que a pessoa vive não é adaptativo, tanto para ela quanto para as pessoas que convivem.</p>
+            <p>- Não são lesões no cérebro (mas há casos que lesões cerebrais pode causar a mudança de personalidade)</p>
+            <p>- Há algum grau de sofrimento (angústia, solidão, dificuldades no relacionamento vividas com amargura, etc.)</p>
+            <p>- Mau desempenho ocupacional (trabalho, escola) e social (familia, amigos)</p>
+            <p>-Classificações de transtornos segundo CID-10 (Código Internacional de Doenças) e DSM-IV (Diagnostic and Statistical Manual of Mental Disorders com modificações do autor) </p>
+            <img src="image/quadro.png">
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
 
+<div class="modal fade bd-example-modal-lg" id="TOCModal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><strong>TOC</strong></h5>
+        <div class="modal-body mt-5">
+            <p>As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na consciência; são vivenciadas com angústia e como algo que “invade” a consciência. O indivíduo reconhece o caráter irracional e absurdo desses pensamentos, tentando, às vezes, neutralizá-los com outros pensamentos ou com atos e rituais específicos.
+            Nas síndromes compulsivas, predominam os comportamentos e rituais repetitivos, como lavar as mãos inúmeras vezes, tomar muitos banhos, verificar se as portas estão trancadas por dezenas de vezes, etc., assim como por atos mentais como repetir palavras mentalmente em silêncio, fazer determinadas contas, rezar, etc., em geral em resposta a uma idéia obsessiva (“Devo estar com AIDS ou sífilis; então tenho que me lavar constantemente.”). Os comportamentos e os atos compulsivos também podem surgir como forma de cumprir regras mágicas que precisam ser rigidamente seguidas. Outras razões para os atos e os rituais compulsivos são pensamentos mágicos que vinculam a realização do ato compulsivo com o afastamento de algum evento temível ou indesejado (“Se eu der 15 voltas no quarteirão antes de entrar em casa, ninguém da família morrerá proximamente”).</p>
+            <p>É ainda o poeta Drummond quem fala dessa angustiosa sensação de sentir-se sujo, contaminado:</p>
+            <p>Minha mão está suja.</p>
+            <p> Preciso cortá-la.</p>
+            <p>Não adianta lavar.</p>
+            <p>A água está podre.</p>
+            <p>Nem ensaboar.</p>
+            <p>O sabão é ruim.</p>
+            <p>A mão está suja,</p>
+            <p>Suja há muitos anos</p>
+        </p>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="EsquizofreniaModal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><strong>Esquizofrenia</strong></h5>
+        <div class="modal-body mt-5">
+
+            <p>- Percepção delirante. Uma percepção absolutamente normal recebe uma significação delirante, que ocorre de modo simultâneo ao ato perceptivo, em geral de forma abrupta, como uma espécie de “revelação”.</p>
+            <p>- Alucinações auditivas características. São as vozes que comentam e/ou comandam a ação do paciente.</p>
+            <p>- Eco do pensamento ou sonorização do pensamento (Gedan-kenlautwerden). O paciente escuta seus pensamentos ao pensá-los.</p>
+            <p>- Difusão do pensamento. Neste caso, o doente tem a sensação de que seus pensamentos são ouvidos ou percebidos claramente pelos outros, no momento em que os pensa.</p>
+            <p>- Roubo do pensamento. Experiência na qual o indivíduo tem a sensação de que seu pensamento é inexplicavelmente extraído de sua mente, como se fosse roubado.</p>
+            <p>- Vivências de influência na esfera corporal ou ideativa. Aqui, dois tipos de vivências de influência são mais significativos:</p>
+
+            <p>Vivências de influência corporal. São experiências nas quais o paciente sente que uma força ou um ser externo age sobre seu corpo, sobre seus órgãos, emitindo raios, influenciando as funções corporais,etc.</p>
+            <p>Vivências de influência sobre o pensamento. Referem-se à experiência de que algo influencia seus pensamentos, o paciente recebe pensamentos impostos de fora, pensamentos feitos, postos em seu cérebro,etc. Também as vivências corporais ou ideativas têm a qualidade de serem experimentadas como feitas, como impostas de fora.</p>
+
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-img mt-5">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left p-2 ">
+            <div class="col-xs-12 col-sm-4 col-md-4 text-justify">
+
+                <h5 class=" text-md-center">HelpIF</h5>
+                <ul class="list-unstyled">
+                    <li class="m-2 text-justify ">
+                        <hr>
+                        <i>BABLLABSLA BSLABS LBLSALABSLBSLABSLA B Sak BSKA BkA Kbk abK Sk akls </i></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5 class=" text-md-center">Contato</h5>
+                    <ul class="list-unstyled quick-links text-justify">
+                        <li>
+                            <hr>
+                            <i>Email: PJIBRJ@gmail.com</i></li>
+                            <li><i> Github: <a href="https://github.com/RauSZin/forum" class="text-white"> https://github.com/RauSZin/forum</a></i></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 ">
+                        <h5 class="text-md-center ">Abas</h5>
+                        <ul class=" list-unstyled quick-links ">
+                            <li>
+                                <hr>
+                                <a href="" class="m-2 text-white"><i class=""></i>Inicio</a></li>
+                                <li><a href="" class="m-2 text-white"><i class=""></i>Eventos</a></li>
+                                <li><a href="" class="m-2 text-white"><i class=""></i>Sobre nós</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5 ">
+                            <ul class="list-unstyled list-inline social text-center">
+                                <li class="list-inline-item rodape_images"><img width="25" class="invert-elements img-fluid" height="25" src="{{ asset('images/facebook-logo.svg') }}"></li>
+                                <li class="list-inline-item rodape_images"><img width="25" class="img-fluid" height="25" src="{{ asset('images/GitHub-Mark-Light-120px-plus.png') }}"></li>
+                                <li class="list-inline-item rodape_images"><img class="img-fluid" width="150" src="{{ asset('images/Marca_IFSP_2015_Itapetininga-18.png') }}"></li>
+                            </ul>
+                            <div class="text-center creditos">Icons made by <a class="text-white" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a class="text-white" href="https://www.flaticon.com/"         title="Flaticon">www.flaticon.com</a> is licensed by <a class="text-white" href="http://creativecommons.org/licenses/by/3.0/"         title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 </body>
 </html>
+<!-- Modal -->
+

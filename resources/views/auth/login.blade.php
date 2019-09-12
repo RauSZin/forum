@@ -26,8 +26,8 @@
     HelpIF
   </a>
   <ul class="navbar-nav">
-  <li class="nav-item"><a class="btn btn-outline-dark mr-3" href="{{ url('/') }}">Home</a></li>
-  <li class="nav-item"><a class="btn btn-outline-dark" href="{{ route('register') }}">Registrar</a></li>
+  <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrar</a></li>
   
 </ul>
 
@@ -48,7 +48,7 @@
                             <input class="form-control" type="password" name="password" placeholder="Password">
                         </div>
                             
-                           <button type="button" class="btn btn-outline-success">Logar</button>
+                           <button type="submit" class="btn btn-outline-success">Logar</button>
                     </form>
 
                 </div>
