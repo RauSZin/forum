@@ -22,14 +22,7 @@ Route::get('/home', function(){
 	return view('home');
 });
 
-#-=-=-=-registro-=-=-=-=-#
+#-=-=-=-Autenticação-=-=-=-=-#
 
 Auth::routes();
-Route::post('/register', 'auth\RegisterController@create')->name('register');
-Route::post('/register/validator, auth\RegisterController@validator')->name('validator');
-
-#-=-=-=-Login-=-=-=-=-#
-
-Route::post('/login', 'auth\LoginController@confirm')->name('confirm');
-Route::get('/home', 'HomeController@index')->name('home');
-//Route::post('login', [ 'as' => 'login', 'uses' => 'LoginController@do']);
+Route::get('/myAccount', 'HomeController@myAccount')->name('myAccount');

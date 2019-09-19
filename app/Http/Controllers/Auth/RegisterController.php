@@ -1,14 +1,10 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Request;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-
 class RegisterController extends Controller
 {
     /*
@@ -21,16 +17,13 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
     use RegistersUsers;
-
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
     protected $redirectTo = '/home';
-
     /**
      * Create a new controller instance.
      *
@@ -40,7 +33,6 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -50,40 +42,23 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-
-            'name' => 'required|string|min:2|max:50',
-            'email' => 'required|string|email|max:50|unique:users',
-            'password' => 'required|string|min:6||max:16|confirmed',
-            'nickname' => 'required|string|min:2|max:10|unique:users'
-
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-           // return redirect()->route('Register');
     }
-
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(Request $request)
+    protected function create(array $data)
     {
-        $user                     =  new User();
-        $user->name               =  $request->input('name');
-        $user->nickname           =  $request->input('nickname');
-        $user->email              =  $request->input('email');
-        $user->type               =  $request->input('type');
-        $user->password           =  $request->input('password');
-        $user->save();
-    
-        return redirect()->route('home');
-        //User::create([
-        //     'type' => $data['type'],
-        //     'name' => $data['name'],
-        //     'nickname' => $data['nickname'],
-        //     'email' => $data['email'],
-        //     'password' => bcrypt($data['password']),
-        //      $user->save()
-         //]);
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
 }
