@@ -8,6 +8,8 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/8153488d88.js" crossorigin="anonymous"></script>
+    <link href="https://stackpack.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -20,8 +22,6 @@
     body{
         font-family: 'Rajdhani', sans-serif;
 
-        }a, a:hover{
-            color:black;
         }
         .bg-img{
             background-image: url('image/bg.jpeg');
@@ -34,30 +34,113 @@
             box-shadow:5px 5px 10px 4px #e3e3e3;
             border:none;
         }
+        .cont .card{
+          transition:0.5s;
+          overflow: hidden;
+          transform-style: preserve-3d;
+        }
+        .cont{
+          display: flex;
+          flex-wrap: wrap;
+          transform-style: preserve-3d;
+          transition:
+        }
+        .cont:hover .card{
+          transform: perspective(500px) rotateY(30deg);
 
+        }
+        .cont .card:hover{
+          transform: perspective(500px) rotateY(0deg);
+          background:linear-gradient(45deg, #ffe478, #ffbf3d);
+          color: white;
+
+        }
+        .cont .card:hover ~ .card{
+          transform: perspective(500px) rotateY(-30deg);
+
+        }
+        .side{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .side a{
+          background:#e74c3c;
+          color: white;
+          font-size: 16px;
+          width:130px;
+          padding:12px;
+          text-decoration:none;
+          margin:8px 0;
+          display:block;
+          margin-left:-100px;
+          transition:0.6s all;
+        }
+        .side a:hover{
+          margin-left:0;
+        }
+        .social-menu ul{
+          display: flex;
+        }
+        .social-menu ul li{
+          list-style: none;
+        }
+        .social-menu ul li .fab{
+          color: black;
+          font-size:30px;
+          margin-top:25%;
+        }
+        .social-menu ul li .fas{
+          color: black;
+          font-size:30px;
+          margin-top:25%;
+        }
+        .social-menu ul li:hover .fas{
+          color: white;
+        }
+        .social-menu ul li:hover .fab{
+          color: white;
+        }
+        .social-menu ul li a{
+          position: relative;
+          width:60px;
+          height:60px;
+          border-radius:50%;
+          background-color: white;
+          text-align:center;
+          display:block;
+          transition: .6s;
+          box-shadow: 0 4px 5px rgba(0,0,0,.5);
+        }
+        .social-menu ul li a:hover{
+          transform:translate(0, -10px);
+          color: white;
+        }
+        .social-menu ul li:nth-child(1) a:hover{
+          background-color:#3b5999;
+        }
+        .social-menu ul li:nth-child(2) a:hover{
+          background-color: #303030;
+        }
+        .social-menu ul li:nth-child(3) a:hover{
+          background-color: #cd201f;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="image/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        HelpIF
-    </a>
-    <ul class="navbar-nav navbar-right">
+<div class="side">
+  @if (Route::has('login'))
 
-        @if (Route::has('login'))
-        <div class="pr-3">
-            @if (Auth::check())
-            <a class="btn btn-outilne-dark" href="{{ url('/home') }}">Home</a>
-            @else
-            <a class="btn btn-outilne-dark" href="{{ url('/login') }}">Login</a>
-            <a class="btn btn-outilne-dark" href="{{ url('/register') }}">Register</a>
-            <a class="btn btn-outilne-dark" href="{{ url('/sobrenos') }}">Sobre Nos</a>
-            @endif
-        </div>
-        @endif
-    </ul>
-</nav>
+      @if (Auth::check())
+      <a href="{{ url('/home') }}" style="background:black;">Home</a>
+      @else
+      <a href="{{ url('/login') }}" style="background:linear-gradient(110deg,#fcc05e,#fff387);">Login</a>
+      <a href="{{ url('/register') }}" style="background:linear-gradient(110deg,#883d90,#d065db);">Register</a>
+      <a href="{{ url('/sobrenos') }}" style="background:linear-gradient(110deg,#5337a8,#8c6de8);">Sobre Nos</a>
+      @endif
+
+  @endif
+</div>
 <div class="bg-img">
     <div class="container">
         <div class="row align-items-center">
@@ -78,7 +161,7 @@
             </div>
         </div>
     </div>
-    
+
     <svg style="pointer-events: none" class="wave" width="100%" height="50px" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 75">
         <defs>
             <style>
@@ -120,9 +203,9 @@
 </svg>
 </div>
 <div class="container mt-5">
-    <div class="row align-items-center text-justify">
+    <div class="row align-items-center text-justify cont">
 
-        <div class="col-md-3 offset-md-1 card mr-5">
+        <div class="col-md-3 offset-md-1 card mr-5 ">
             <h3 class="pt-3">Transtornos</h3>
             <hr>
             <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
@@ -136,7 +219,7 @@
                 <h3 class="pt-3">TOC</h2>
                     <hr>
                     <p class="p-2">As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na con... <a data-toggle="modal" data-target="#TOCModal">Ver Mais</a></p>
-                </div>
+            </div>
 
 
             </div>
@@ -162,7 +245,7 @@
           <span aria-hidden="true">&times;</span>
       </button>
   </div>
-  <div class="modal-footer">
+    <div class="modal-footer">
     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 </div>
 </div>
@@ -231,52 +314,20 @@
 <div class="bg-img mt-5">
     <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left p-2 ">
-            <div class="col-xs-12 col-sm-4 col-md-4 text-justify mt-5">
-
-                <h5 class=" text-md-center">HelpIF</h5>
-                <ul class="list-unstyled">
-                    <li class="m-2 text-justify ">
-                        <hr>
-                        <i>BABLLABSLA BSLABS LBLSALABSLBSLABSLA B Sak BSKA BkA Kbk abK Sk akls </i></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4  mt-5">
-                    <h5 class=" text-md-center">Contato</h5>
-                    <ul class="list-unstyled quick-links text-justify">
-                        <li>
-                            <hr>
-                            <i>Email: PJIBRJ@gmail.com</i></li>
-                            <li><i> Github: <a href="https://github.com/RauSZin/forum" class="text-white"> https://github.com/RauSZin/forum</a></i></li>
-
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 mt-5 ">
-                        <h5 class="text-md-center ">Abas</h5>
-                        <ul class=" list-unstyled quick-links ">
-                            <div class="col-md-6">
-                                <li>
-                                    <hr>
-                                    <a href="" class="m-2 text-white"><i class=""></i>Home</a></li>
-                                    <li><a href="" class="m-2 text-white"><i class=""></i>Login</a></li>
-                                    <li><a href="" class="m-2 text-white"><i class=""></i>Register</a></li>
-                            </div>
-                
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-3 ">
-                            <ul class="list-unstyled list-inline social text-center">
-                                <li class="list-inline-item rodape_images"><img width="25" class="invert-elements img-fluid" height="25" src="image/icon_facebook.png"></li>
-                                <li class="list-inline-item rodape_images"><img width="25" class="img-fluid" height="25" src="image/github_icon.png"></li>
-                                <li class="list-inline-item rodape_images"><img class="img-fluid" width="100" src="image/icon_ifsp.png"></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
+          <div class="col-md-12">
+            <div class="social-menu mt-2">
+              <center><h4>Contato</h4></center>
+              <hr>
+                <ul class="justify-content-center">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i> </a> </li>
+                  <li><a href="#"><i class="fab fa-github"></i> </a> </li>
+                  <li><a href="#"><i class="fas fa-mail-bulk"></i> </a> </li>
+                </ul>
             </div>
+          </div>
+
+              </div>
+          </div>
+        </div>
         </body>
         </html>
-        <!-- Modal -->
-
