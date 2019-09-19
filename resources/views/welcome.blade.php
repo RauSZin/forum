@@ -18,10 +18,14 @@
     <!-- Styles -->
     <style>
 
-
+html{
+  width:100%;
+  height:100%;
+}
     body{
         font-family: 'Rajdhani', sans-serif;
-
+        width:100%;
+        height:100%;
         }
         .bg-img{
             background-image: url('image/bg.jpeg');
@@ -31,8 +35,7 @@
 
         }
         .card{
-            box-shadow:5px 5px 10px 4px #e3e3e3;
-            border:none;
+          border:none;
         }
         .cont .card{
           transition:0.5s;
@@ -43,7 +46,6 @@
           display: flex;
           flex-wrap: wrap;
           transform-style: preserve-3d;
-          transition:
         }
         .cont:hover .card{
           transform: perspective(500px) rotateY(30deg);
@@ -51,7 +53,7 @@
         }
         .cont .card:hover{
           transform: perspective(500px) rotateY(0deg);
-          background:linear-gradient(45deg, #ffe478, #ffbf3d);
+          background:linear-gradient(45deg, #ea135e, #fbbc64);
           color: white;
 
         }
@@ -111,6 +113,7 @@
           display:block;
           transition: .6s;
           box-shadow: 0 4px 5px rgba(0,0,0,.5);
+          margin-right: 15px;
         }
         .social-menu ul li a:hover{
           transform:translate(0, -10px);
@@ -125,10 +128,28 @@
         .social-menu ul li:nth-child(3) a:hover{
           background-color: #cd201f;
         }
+        .modal-content{
+   max-height: 220%; /*altura da modal*/
+}
+
+.modal-dialog{
+   height: 100%; /*altura da view da modal*/
+   margin-top: 0;
+}
+
+.modal-body{
+   overflow: auto; /*habilita o overflow no corpo da modal*/
+}
+.back{
+background-image: linear-gradient(to bottom, #ffffff, #f9f9f9, #f3f3f3, #ededed, #e7e7e7);
+}
+.w{
+  height:14REM;
+}
     </style>
 </head>
 <body>
-<div class="side">
+<div class="side d-sm-none d-md-none d-lg-block d-none">
   @if (Route::has('login'))
 
       @if (Auth::check())
@@ -145,7 +166,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 mt-5">
-                <center><h2><i>Bem-Vindo</i></h2></center>
+                <center><h2><i><strong>Bem-Vindo</strong></i></h2></center>
             </div>
             <div class="row justify-content-end">
                 <div class="col-md-6">
@@ -203,23 +224,22 @@
 </svg>
 </div>
 <div class="container mt-5">
-    <div class="row align-items-center text-justify cont">
-
-        <div class="col-md-3 offset-md-1 card mr-5 ">
+    <div class="row align-items-center cont">
+        <div class="col-md-12 col-lg-4 card w">
             <h3 class="pt-3">Transtornos</h3>
             <hr>
             <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
         </div>
-        <div class="col-md-3  card mr-5">
-            <h3 class="pt-3">Esquizofrenia</h2>
+        <div class="col-md-12 col-lg-4 card w">
+            <h3 class="pt-3">Esquizofrenia</h3>
                 <hr>
                 <p class="p-2">Percepção delirante. Uma percepção absolutamente normal recebe uma significação delirante, que ocorre de modo simultâneo ao ato perceptivo, em ger... <a data-toggle="modal" data-target="#EsquizofreniaModal">Ver Mais</a></p>
-            </div>
-            <div class="col-md-3 card">
-                <h3 class="pt-3">TOC</h2>
-                    <hr>
-                    <p class="p-2">As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na con... <a data-toggle="modal" data-target="#TOCModal">Ver Mais</a></p>
-            </div>
+        </div>
+        <div class="col-md-12 col-lg-4 card w">
+            <h3 class="pt-3">TOC</h3>
+            <hr>
+                <p class="p-1">As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na consciência...<a data-toggle="modal" data-target="#TOCModal">Ver Mais</a></p>
+        </div>
 
 
             </div>
@@ -231,7 +251,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"><strong>Transtornos</strong></h5>
-        <div class="modal-body mt-5">
+        <div class="modal-body mt-5 text-justify">
             <p>- Surgem na infância ou na adolescência (não anula o fato de adultos ou idosos desenvolverem);</p>
             <p>- Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do indivíduo. Isso não significa que qualquer episódio possa ser um transtorno de personalidade, a pessoa pode ter outros tipos de doença mental.</p>
             <p>- O modo que a pessoa vive não é adaptativo, tanto para ela quanto para as pessoas que convivem.</p>
@@ -257,7 +277,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"><strong>TOC</strong></h5>
-        <div class="modal-body mt-5">
+        <div class="modal-body mt-5 text-justify">
             <p>As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na consciência; são vivenciadas com angústia e como algo que “invade” a consciência. O indivíduo reconhece o caráter irracional e absurdo desses pensamentos, tentando, às vezes, neutralizá-los com outros pensamentos ou com atos e rituais específicos.
             Nas síndromes compulsivas, predominam os comportamentos e rituais repetitivos, como lavar as mãos inúmeras vezes, tomar muitos banhos, verificar se as portas estão trancadas por dezenas de vezes, etc., assim como por atos mentais como repetir palavras mentalmente em silêncio, fazer determinadas contas, rezar, etc., em geral em resposta a uma idéia obsessiva (“Devo estar com AIDS ou sífilis; então tenho que me lavar constantemente.”). Os comportamentos e os atos compulsivos também podem surgir como forma de cumprir regras mágicas que precisam ser rigidamente seguidas. Outras razões para os atos e os rituais compulsivos são pensamentos mágicos que vinculam a realização do ato compulsivo com o afastamento de algum evento temível ou indesejado (“Se eu der 15 voltas no quarteirão antes de entrar em casa, ninguém da família morrerá proximamente”).</p>
             <p>É ainda o poeta Drummond quem fala dessa angustiosa sensação de sentir-se sujo, contaminado:</p>
@@ -287,7 +307,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"><strong>Esquizofrenia</strong></h5>
-        <div class="modal-body mt-5">
+        <div class="modal-body mt-5 text-justify">
 
             <p>- Percepção delirante. Uma percepção absolutamente normal recebe uma significação delirante, que ocorre de modo simultâneo ao ato perceptivo, em geral de forma abrupta, como uma espécie de “revelação”.</p>
             <p>- Alucinações auditivas características. São as vozes que comentam e/ou comandam a ação do paciente.</p>
@@ -311,12 +331,11 @@
 </div>
 </div>
 
-<div class="bg-img mt-5">
+<div class="back mt-5">
     <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left p-2 ">
-          <div class="col-md-12">
-            <div class="social-menu mt-2">
-              <center><h4>Contato</h4></center>
+            <div class="social-menu mt-2 col-12">
+<h4>Social</h4>
               <hr>
                 <ul class="justify-content-center">
                   <li><a href="#"><i class="fab fa-facebook-f"></i> </a> </li>
@@ -324,7 +343,6 @@
                   <li><a href="#"><i class="fas fa-mail-bulk"></i> </a> </li>
                 </ul>
             </div>
-          </div>
 
               </div>
           </div>
