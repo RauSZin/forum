@@ -32,20 +32,5 @@ class HomeController extends Controller
         return view('home');
     }
 
-  public function myAccount()
-  {
-
-    $postUser = array();
-    $id_user = Auth()->id();
-    #$post = Post::all();
-    #foreach ($post as $posts) {
-    #  if ($posts['id_user'] == $id_user){
-    #    $postUser[] = $posts;
-    #  }
-    #}
-    $user = User::all();
-    #$comments = Comments::all();
-    return view('myAccount')->with('id_user', $id_user);#->with('posts', $postUser)->with('user',$user)->with('comments', $comments);
-
-  }
+ 
 }
