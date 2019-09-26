@@ -134,6 +134,7 @@
       @if (Auth::check())
       <a href="{{ url('/home') }}" style="background:grey;">Home</a>
       <a href="{{ url('/myAccount') }}" style="background:orange">Minha Conta</a>
+      <a href="{{ url('/logout') }}" style="background:red">Logout</a>
       @else
       <a href="{{ url('/login') }}" style="background:linear-gradient(110deg,#fcc05e,#fff387);">Login</a>
       <a href="{{ url('/register') }}" style="background:linear-gradient(110deg,#883d90,#d065db);">Register</a>

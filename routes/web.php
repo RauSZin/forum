@@ -25,4 +25,4 @@ Route::get('/home', function(){
 #-=-=-=-Autenticação-=-=-=-=-#
 
 Auth::routes();
-Route::get('/myAccount', 'HomeController@myAccount')->name('myAccount');
+Route::get('/myAccount', 'UserController@index')->name('myAccount');

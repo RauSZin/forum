@@ -12,11 +12,9 @@ class AdminSeeder extends Seeder
     public function run()
     {
         $users = [
-        	'type' => 'admin',
         	'name' => 'Raul',
         	'email' => 'raul.ifsp@gmail.com',
         	'password' => '123123123',
-        	'nickname' => 'programetor'
         ];
         DB::table('users')->insert($users);
     }

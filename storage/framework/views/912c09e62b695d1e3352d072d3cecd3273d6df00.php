@@ -134,6 +134,7 @@
       <?php if(Auth::check()): ?>
       <a href="<?php echo e(url('/home')); ?>" style="background:grey;">Home</a>
       <a href="<?php echo e(url('/myAccount')); ?>" style="background:orange">Minha Conta</a>
+      <a href="<?php echo e(url('/logout')); ?>" style="background:red">Logout</a>
       <?php else: ?>
       <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#fcc05e,#fff387);">Login</a>
       <a href="<?php echo e(url('/register')); ?>" style="background:linear-gradient(110deg,#883d90,#d065db);">Register</a>
