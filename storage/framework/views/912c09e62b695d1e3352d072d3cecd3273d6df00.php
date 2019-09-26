@@ -16,115 +16,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Styles -->
+    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
     <style>
-
-
-    body{
-        font-family: 'Rajdhani', sans-serif;
-
-        }
         .bg-img{
             background-image: url('image/bg.jpeg');
             background-repeat: no-repeat;
             background-size: cover;
-            color: white;
-
-        }
-        .card{
-            box-shadow:5px 5px 10px 4px #e3e3e3;
-            border:none;
-        }
-        .cont .card{
-          transition:0.5s;
-          overflow: hidden;
-          transform-style: preserve-3d;
-        }
-        .cont{
-          display: flex;
-          flex-wrap: wrap;
-          transform-style: preserve-3d;
-          transition:
-        }
-        .cont:hover .card{
-          transform: perspective(500px) rotateY(30deg);
-
-        }
-        .cont .card:hover{
-          transform: perspective(500px) rotateY(0deg);
-          background:linear-gradient(45deg, #ffe478, #ffbf3d);
-          color: white;
-
-        }
-        .cont .card:hover ~ .card{
-          transform: perspective(500px) rotateY(-30deg);
-
-        }
-        .side{
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        .side a{
-          background:#e74c3c;
-          color: white;
-          font-size: 16px;
-          width:130px;
-          padding:12px;
-          text-decoration:none;
-          margin:8px 0;
-          display:block;
-          margin-left:-100px;
-          transition:0.6s all;
-        }
-        .side a:hover{
-          margin-left:0;
-        }
-        .social-menu ul{
-          display: flex;
-        }
-        .social-menu ul li{
-          list-style: none;
-        }
-        .social-menu ul li .fab{
-          color: black;
-          font-size:30px;
-          margin-top:25%;
-        }
-        .social-menu ul li .fas{
-          color: black;
-          font-size:30px;
-          margin-top:25%;
-        }
-        .social-menu ul li:hover .fas{
-          color: white;
-        }
-        .social-menu ul li:hover .fab{
-          color: white;
-        }
-        .social-menu ul li a{
-          position: relative;
-          width:60px;
-          height:60px;
-          border-radius:50%;
-          background-color: white;
-          text-align:center;
-          display:block;
-          transition: .6s;
-          box-shadow: 0 4px 5px rgba(0,0,0,.5);
-        }
-        .social-menu ul li a:hover{
-          transform:translate(0, -10px);
-          color: white;
-        }
-        .social-menu ul li:nth-child(1) a:hover{
-          background-color:#3b5999;
-        }
-        .social-menu ul li:nth-child(2) a:hover{
-          background-color: #303030;
-        }
-        .social-menu ul li:nth-child(3) a:hover{
-          background-color: #cd201f;
-        }
+            color: white;}
     </style>
 </head>
 <body>
@@ -132,7 +30,7 @@
   <?php if(Route::has('login')): ?>
 
       <?php if(Auth::check()): ?>
-      <a href="<?php echo e(url('/home')); ?>" style="background:grey;">Home</a>
+      <a href="<?php echo e(url('/home')); ?>" style="background:grey;">Forúm</a>
       <a href="<?php echo e(url('/myAccount')); ?>" style="background:orange">Minha Conta</a>
       <?php else: ?>
       <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#fcc05e,#fff387);">Login</a>
@@ -206,23 +104,39 @@
 <div class="container mt-5">
     <div class="row align-items-center text-justify cont">
 
-        <div class="col-md-3 offset-md-1 card mr-5 ">
+        <div class="col-md-4 card">
             <h3 class="pt-3">Transtornos</h3>
             <hr>
             <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
         </div>
-        <div class="col-md-3  card mr-5">
+        <div class="col-md-4 card">
             <h3 class="pt-3">Esquizofrenia</h2>
                 <hr>
                 <p class="p-2">Percepção delirante. Uma percepção absolutamente normal recebe uma significação delirante, que ocorre de modo simultâneo ao ato perceptivo, em ger... <a data-toggle="modal" data-target="#EsquizofreniaModal">Ver Mais</a></p>
             </div>
-            <div class="col-md-3 card">
+            <div class="col-md-4 card">
                 <h3 class="pt-3">TOC</h2>
                     <hr>
                     <p class="p-2">As síndromes obsessivas caracterizam-se por idéias, pensamentos, fantasias ou imagens persistentes, que surgem de forma recorrente na con... <a data-toggle="modal" data-target="#TOCModal">Ver Mais</a></p>
             </div>
-
-
+          </div>
+          <div class="row  align-items-center text-justify cont mt-5">
+            <div class="col-md-4 card">
+                <h3 class="pt-3">Transtornos</h3>
+                <hr>
+                <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
+            </div>
+            <div class="col-md-4 card">
+                <h3 class="pt-3">Transtornos</h3>
+                <hr>
+                <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
+            </div>
+            <div class="col-md-4  card">
+                <h3 class="pt-3">Transtornos</h3>
+                <hr>
+                <p class="p-2">Manifestação de emoções e comportamentos irregular (controle dos impulsos, modo de relacionamento, etc.)envolvendo vários aspectos da vida do... <a data-toggle="modal" data-target="#transtornoModal">Ver Mais</a></p>
+            </div>
+</div>
             </div>
         </div>
     </div>
