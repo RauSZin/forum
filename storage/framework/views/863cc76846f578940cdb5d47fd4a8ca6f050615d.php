@@ -28,7 +28,7 @@
 
     <!-- Styles -->
 
-    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet">
 
 
 </head>

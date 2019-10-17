@@ -106,3 +106,47 @@ box-shadow: inset 78px 79px 34px -97px rgba(61,0,5,1);
         .social-menu ul li:nth-child(3) a:hover{
           background-color: #cd201f;
         }
+
+.box{
+  border:1px solid #636e72;
+  border-radius:7px;
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background:white; 
+  text-align: center;
+}
+.box input[type="email"], .box input[type="password"]{
+  border: 0;
+  background: none;
+  margin:20px auto;
+  display: block;
+  text-align: center;
+  border-bottom:solid 2px #4b4b4b;
+  border-radius:5px;
+  padding:14px 10px;
+  width: 200px;
+  outline:none;
+  color:white;
+  transition:0.25s;
+}
+.box input[type="email"]:focus, .box input[type="password"]:focus{
+  width:280px;
+  border-color:#3ae374;
+}
+.box input[type="submit"]{
+  border: 0;
+  background:linear-gradient(45deg ,#3ae374,#4b4b4b);
+  margin:20px auto;
+  display: block;
+  text-align: center;
+  border-radius:10px;
+  padding:10px 8px;
+  width: 150px;
+  outline:none;
+  color:white;
+  transition:0.25s;
+}
