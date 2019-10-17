@@ -29,7 +29,7 @@
         }
         .cont .card:hover{
           transform: perspective(500px) rotateY(0deg);
-          background:linear-gradient(45deg, #ff3c00, #ffbf3d);
+          background:linear-gradient(45deg, #d21373, #9647a0);
           color: white;
           -webkit-box-shadow: inset 78px 79px 34px -97px rgba(0,20,99,1);
 -moz-box-shadow: inset 78px 79px 34px -97px rgba(0,20,99,1);
@@ -108,7 +108,7 @@ box-shadow: inset 78px 79px 34px -97px rgba(61,0,5,1);
         }
 
 .box{
-  border:1px solid #636e72;
+  box-shadow: 8px 10px 10px #e0e0e0;
   border-radius:7px;
   width: 300px;
   padding: 40px;
@@ -119,7 +119,7 @@ box-shadow: inset 78px 79px 34px -97px rgba(61,0,5,1);
   background:white; 
   text-align: center;
 }
-.box input[type="email"], .box input[type="password"]{
+.box input[type="email"], .box input[type="password"],  .box input[type="text"]{
   border: 0;
   background: none;
   margin:20px auto;
@@ -133,7 +133,7 @@ box-shadow: inset 78px 79px 34px -97px rgba(61,0,5,1);
   color:white;
   transition:0.25s;
 }
-.box input[type="email"]:focus, .box input[type="password"]:focus{
+.box input[type="email"]:focus, .box input[type="password"]:focus, .box input[type="text"]:focus{
   width:280px;
   border-color:#3ae374;
 }

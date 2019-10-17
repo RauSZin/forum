@@ -2,9 +2,15 @@
     
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-        <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
 </head>
+<div class="side">
 
+
+        <a href="{{ url('/') }}" style="background:linear-gradient(110deg, #ffae00,#ffc547)orange">Home</a>
+      <a href="{{ url('/register') }}" style="background:linear-gradient(110deg,#883d90,#d065db);">Register</a>
+    
+</div>
 
 
 
