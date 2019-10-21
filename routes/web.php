@@ -11,7 +11,7 @@
 |
 */
 
-#-=-=-=-página index-=-=-=-=-#
+#-=-=-=-página INDEX-=-=-=-=-#
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,7 +22,18 @@ Route::get('/home', function(){
 	return view('home');
 });
 
-#-=-=-=-Autenticação-=-=-=-=-#
+#-=-=-=-AUTENTICAÇÃO-=-=-=-=-#
 
 Auth::routes();
+Route::get('/myAccount', 'UserController@index')->name('myAccount');
+
+#-=-=-=-=-POST=-=-=-=-=-=-#
+
+Route::get('/posts/list','PostsController@index');
+Route::get('/posts/create','PostsController@create');
+Route::post('/posts','PostsController@store');
+Route::get('/posts/postDescribe','PostsController@describe');
+
+#-=-=-=-=-MINHA CONTA=-=-=-=-=-=-#
+
 Route::get('/myAccount', 'UserController@index')->name('myAccount');

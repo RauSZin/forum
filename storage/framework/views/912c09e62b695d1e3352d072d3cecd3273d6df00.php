@@ -30,7 +30,7 @@
   <?php if(Route::has('login')): ?>
 
       <?php if(Auth::check()): ?>
-      <a href="<?php echo e(url('/home')); ?>" style="background:grey;">Forúm</a>
+      <a href="<?php echo e(url('/post/list')); ?>" style="background:grey;">Forúm</a>
       <a href="<?php echo e(url('/myAccount')); ?>" style="background:orange">Minha Conta</a>
       <a href="<?php echo e(url('/logout')); ?>" style="background:red">Logout</a>
       <?php else: ?>

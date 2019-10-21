@@ -30,7 +30,7 @@
   @if (Route::has('login'))
 
       @if (Auth::check())
-      <a href="{{ url('/home') }}" style="background:grey;">Forúm</a>
+      <a href="{{ url('/post/list') }}" style="background:grey;">Forúm</a>
       <a href="{{ url('/myAccount') }}" style="background:orange">Minha Conta</a>
       <a href="{{ url('/logout') }}" style="background:red">Logout</a>
       @else
