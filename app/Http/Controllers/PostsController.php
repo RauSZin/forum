@@ -31,10 +31,11 @@ class PostsController extends Controller
     return view('posts.create');
 }
 
- public function store(){
-     request()->validate([
-         'image_path' => ['required', 'image']
-     ]);
+ public function store(Request $request){
+
+    $this->validate($request, [
+    'image_path' => 'required|image',
+]);
      $post = Post::create([
          'user_id' => auth()->id(),
          'image_path' => request()->file('image_path')->store('posts', 'public'),

@@ -30,13 +30,13 @@
   <?php if(Route::has('login')): ?>
 
       <?php if(Auth::check()): ?>
-      <a href="<?php echo e(url('/post/list')); ?>" style="background:grey;">Forúm</a>
-      <a href="<?php echo e(url('/myAccount')); ?>" style="background:orange">Minha Conta</a>
-      <a href="<?php echo e(url('/logout')); ?>" style="background:red">Logout</a>
+      <a href="<?php echo e(url('/posts/list')); ?>" style="background:linear-gradient(110deg,darkgrey,black)">Forúm</a>
+      <a href="<?php echo e(url('/myAccount')); ?>" style="background:linear-gradient(110deg,#0260d4,darkblue)">Minha Conta</a>
+      <a href="<?php echo e(url('/logout')); ?>" style="background:linear-gradient(110deg, red,#4d000b)">Logout</a>
       <?php else: ?>
-      <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#fcc05e,#fff387);">Login</a>
-      <a href="<?php echo e(url('/register')); ?>" style="background:linear-gradient(110deg,#883d90,#d065db);">Register</a>
-      <a href="<?php echo e(url('/sobrenos')); ?>" style="background:linear-gradient(110deg,#5337a8,#8c6de8);">Sobre Nos</a>
+      <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#27afbf,#6230ab);">Login</a>
+      <a href="<?php echo e(url('/register')); ?>" style="background:linear-gradient(110deg,#d065db,#883d90);">Register</a>
+      <a href="<?php echo e(url('/sobrenos')); ?>" style="background:linear-gradient(110deg,#d21373,#8c6de8);">Sobre Nos</a>
       <?php endif; ?>
 
   <?php endif; ?>

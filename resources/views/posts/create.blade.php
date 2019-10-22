@@ -17,7 +17,7 @@
 
                     <div class="col-md-12">
 
-                        <input placeholder="Nome da foto" id="filter" type="text" class="form-control" name="filter" >
+                        <input placeholder="Título" id="filter" type="text" class="form-control" name="filter" >
 
 
                     </div>

@@ -7,8 +7,8 @@
 <div class="side">
 
 
-        <a href="{{ url('/') }}" style="background:linear-gradient(110deg, #ffae00,#ffc547)orange">Home</a>
-      <a href="{{ url('/register') }}" style="background:linear-gradient(110deg,#883d90,#d065db);">Register</a>
+        <a href="{{ url('/') }}" style="background:linear-gradient(110deg, darkgrey,black)">Home</a>
+      <a href="{{ url('/register') }}" style="background:linear-gradient(110deg,#d065db,#883d90);">Register</a>
     
 </div>
 

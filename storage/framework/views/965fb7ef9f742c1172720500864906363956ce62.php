@@ -5,8 +5,8 @@
 </head>
 <div class="side">
 
-        <a href="<?php echo e(url('/')); ?>" style="background:linear-gradient(110deg, #ffae00,#ffc547)orange">Home</a>
-       <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#fcc05e,#fff387);">Login</a>
+        <a href="<?php echo e(url('/')); ?>" style="background:linear-gradient(110deg, darkgrey,black)">Home</a>
+       <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#27afbf,#6230ab);">Login</a>
     
 </div>
 

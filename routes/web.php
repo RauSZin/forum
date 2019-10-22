@@ -25,7 +25,9 @@ Route::get('/home', function(){
 #-=-=-=-AUTENTICAÇÃO-=-=-=-=-#
 
 Auth::routes();
+Route::post('/login', 'Auth\LoginController@login');
 Route::get('/myAccount', 'UserController@index')->name('myAccount');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 #-=-=-=-=-POST=-=-=-=-=-=-#
 
