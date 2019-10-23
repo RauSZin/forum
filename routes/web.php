@@ -31,7 +31,7 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 #-=-=-=-=-POST=-=-=-=-=-=-#
 
-Route::get('/posts/list','PostsController@index');
+Route::get('/posts/list','PostsController@index')->name('list');
 Route::get('/posts/create','PostsController@create');
 Route::post('/posts','PostsController@store');
 Route::get('/posts/postDescribe','PostsController@describe');
