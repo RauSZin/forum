@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,8 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/posts/list','PostsController@index')->name('list');
 Route::get('/posts/create','PostsController@create');
 Route::post('/posts','PostsController@store');
-Route::get('/posts/postDescribe','PostsController@describe');
+Route::get('/posts/postDescribe/{id}', 'PostsController@describe');
+
 
 #-=-=-=-=-MINHA CONTA=-=-=-=-=-=-#
 

@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 use App\User;
 class PostsController extends Controller
@@ -18,12 +19,12 @@ class PostsController extends Controller
 
  }
 
- public function describe(){
-     $posts = Post::find($id);
-     $comments = Comments::all();
+ public function describe($id){
+     $post = Post::find($id);
+     #$comments = Comments::all();
      $users = User::all();
-     return view('posts.postDescribe')->with('posts', $posts)->with('comments',$comments)->with('users', $users);
-
+     return view('posts.postDescribe')->with('post', $post)->with('users', $users);
+#->with('comments',$comments)
  }
 
 
