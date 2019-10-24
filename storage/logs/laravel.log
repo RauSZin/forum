@@ -8606,3 +8606,6 @@ Stack trace:
 [2019-10-23 19:22:41] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in C:\xampp\htdocs\forum\storage\framework\views\9db36fa4c1e97a2f8d0f04959ec5c8ec8ee589c2.php:1
 Stack trace:
 #0 {main}  
+[2019-10-24 00:36:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'if' (T_IF)' in C:\xampp\htdocs\forum\storage\framework\views\2b532e623051a2defe49c9de56a184856d9be445.php:18
+Stack trace:
+#0 {main}  

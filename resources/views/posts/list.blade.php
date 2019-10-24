@@ -1,6 +1,4 @@
 @extends('layouts.app')
-
-
 @section('content')
 
  <p>Links dos posts<p>
@@ -14,14 +12,16 @@
   </tr>
 
      @foreach ($posts as $post)
-     @foreach ($users as $user)
 <tr>
-      <td><a href="/posts/postDescribe/{{$post->id}}">{{$post->filter}}</td>
-      <td>{{$post->created_at}}</td>
-      <td>{{$user->name}}</td>
+       <td><a href="/posts/postDescribe/{{$post->id}}">{{$post->filter}}</td>
+       <td>{{$post->created_at}}</td>
+       @foreach ($users as $user)
+          @if ($post->user_id == $user->id)
+            <td>{{$user->name}}</td>
+          @endif
 
-   </tr>
 
       @endforeach
+</tr>
      @endforeach
    </table>
