@@ -12,17 +12,3 @@
 	}
 </style>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light ">
-	<a class="navbar-brand" href="#">
-		<img src="https://static.thenounproject.com/png/640563-200.png" width="30" height="30" class="d-inline-block align-top" alt="">
-		HelpIF
-	</a>
-	<ul class="navbar-nav">
-		<li class="nav-item"><a class="nav-link" href="<?php echo e(url('/')); ?>">Home</a></li>
-				<li class="nav-item"><a href="<?php echo e(route('login')); ?>" class="nav-link">Login</a></li>
-		<li class="nav-item"><a class="nav-link" href="<?php echo e(route('register')); ?>">Registrar</a></li>
-
-
-	</ul>
-
-</nav>

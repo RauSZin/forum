@@ -1,72 +1,65 @@
-<div class="login">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <style type="text/css">
+          body{
+    font-family:'Rajdhani', sans-serif;
+    background-color:white;
+    color:black;
+  }
+  #description{
+    resize: none;
 
-    <div class="row">
+  }
+  .input-title{
+    border:none;
+    width:100%;
+    box-shadow:0 2px 2px rgba(0,0,0,0.1);
+    padding:5px;
+    border-radius:1px;
+    margin-bottom:10px;
+  }
+  .textarea{
+    background-color:#f2f2f2;
+    border:none;
+    width:100%;
+    box-shadow:0 2px 2px rgba(0,0,0,0.1);
+    padding:5px;
+    border-radius:1px;
+  }
+   #image_path{
+    width:100%;
+    border:none;
+   }
+   .mt-1{
+    margin-top:10px;
+   }
+    </style>
+</head>
+<div class=" centralizador">
+<h1 class="">Poste seu assunto !</h1>
+<form method="POST" enctype="multipart/form-data" action="/posts">
+ {{csrf_field() }}
 
-        <div class="offset-md-4 col-md-4 border text-center p-5 bg-white">
-        <div><center> <a class = "btn btn-primary" href="/post">Voltar</a> </center></div>
+        <input placeholder="Título" id="filter" class="input-title" type="text" name="filter">
 
-
-            <h1 class="">Poste seu assunto !</h1>
-
-
-
-            <form method="POST" enctype="multipart/form-data" action="/posts">
-                {{csrf_field() }}
-                <div class="form-group row">
-
-
-                    <div class="col-md-12">
-
-                        <input placeholder="Título" id="filter" type="text" class="form-control" name="filter" >
-
-
-                    </div>
-
-                </div>
-
-
-<!--                <div class="form-group row">
-
-                  <div class="col-md-12">
-
-                      <textarea placeholder="Título" id="title" type="text" class="form-control" name="title" required=""></textarea>
-
-                  </div>
-                </div> -->
-                <div class="form-group row">
-                    <div class="col-md-12">
-
-                        <textarea placeholder="description" id="description" type="text" class="form-control" name="description" required=""> </textarea>
-
-                    </div>
-
-                </div>
-
-                <div class="form-group row">
-
-
-                    <div class="col-md-12">
-
-                        <input type="file" class="form-control" name="image_path">
+        <textarea id="description" class="textarea" type="text" name="description" required=""> </textarea>
 
 
-                    </div>
 
-                </div>
+                        <input type="file" name="image_path" class="form-control mt-1">
 
 
-                <div class="form-group row mt-0">
 
-                    <div class="col-md-12">
-
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-success mt-1">
 
                             Postar
 
                         </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+
+</form>
+<a class = "btn btn-warning" href="/posts/list">Voltar</a>
+</div>
+
 </div>
