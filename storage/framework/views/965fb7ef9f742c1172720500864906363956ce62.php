@@ -7,7 +7,7 @@
 
         <a href="<?php echo e(url('/')); ?>" style="background:linear-gradient(110deg, darkgrey,black)">Home</a>
        <a href="<?php echo e(url('/login')); ?>" style="background:linear-gradient(110deg,#27afbf,#6230ab);">Login</a>
-    
+
 </div>
 
 <form method="POST" action="<?php echo e(route('register')); ?>" class="box">
@@ -63,11 +63,11 @@
 
 
 
-    <input type="submit" class="logbtn" value="Rgistrar">
+    <input type="submit" class="logbtn" value="Registrar">
 
 
 
-    
+
 
 
     <p>

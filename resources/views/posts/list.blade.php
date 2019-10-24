@@ -27,20 +27,21 @@
 </head>
 <div class="container">
   <center><h1>Bem-Vindos ao nosso Fórum</h1></center>
-  <div class="row">
+
+
  @foreach ($posts as $post)
-     @foreach ($users as $user)
+      <div class="col-md-5 ml-5 border posts">
+        <h3><strong><a href="/posts/postDescribe/{{$post->id}}">{{$post->filter}}</strong></h3>
+          <p>{{$post->created_at}}</p>
+          @foreach ($users as $user)
+            @if ($post->user_id == $user->id)
+            <p>Postado por: {{$user->name}}</p>
 
-    <div class="col-md-5 ml-5 border posts">
-      <h3><strong><a href="/posts/postDescribe/{{$post->id}}">{{$post->filter}}</strong></h3>
-      
-      <p>Postado por: {{$user->name}}</p></a>
-      <p>{{$post->created_at}}</p>
+            @endif
 
-    </div>
 
-      @endforeach
-     @endforeach
+          @endforeach
+        </div>
+@endforeach
 
-     </div>
 </div>
